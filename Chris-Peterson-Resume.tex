@@ -18,22 +18,18 @@
 
 \definecolor{cvblue}{HTML}{304263}
 
-%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
-% These are the real workhorses of this template
-\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
-\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}}
+\newcommand{\is}{\par\vskip.5ex plus .4ex}
 \newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
 \newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
     \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
 \newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
      \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
 
 \begin{document}
 
-% Style definitions -- killing the unnecessary space and adding the skips explicitly
 \setlength{\topskip}{0pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -71,7 +67,7 @@
 \vspace{-20pt}
 \paragraph[*]{Databases}
 \begin{itemize}
-\item Redshift, MySQL, PostgreSQL, DynamoDB
+\item Redshift, MySQL, PostgreSQL, Athena, DynamoDB
 \end{itemize} 
 \vspace{-18pt}
 \paragraph[*]{Languages}
@@ -81,10 +77,10 @@
 \vspace{-18pt}
 \paragraph[*]{Markup/Design}
 \begin{itemize}
-\item HTML, CSS, \LaTeX
+\item \LaTeX ,HTML, CSS
 \end{itemize}
 \vspace{-18pt}
-\paragraph[*]{Frameworks}
+\paragraph[*]{Web Frameworks}
 \begin{itemize}
 \item Flask, Django, Express, React
 \end{itemize}
@@ -94,9 +90,19 @@
 \item Git
 \end{itemize} 
 \vspace{-18pt}
+\paragraph[*]{AWS}
+\begin{itemize}
+\item S3, Lambda, SageMaker, EC2, ECS Fargate, IAM, Secrets Manager, CloudWatch, EventBridge
+\end{itemize}
+\vspace{-18pt}
+\paragraph[*]{Project Management}
+\begin{itemize}
+\item Asana
+\end{itemize} 
+\vspace{-18pt}
 \paragraph[*]{Data Visualization}
 \begin{itemize}
-\item Quicksight, Tableau, Plotly, Matplotlib, Seaborn, Dash, Jupyter Notebook
+\item Quicksight, Dash, Jupyter Notebook, Matplotlib, Seaborn, Tableau
 \end{itemize}
 \end{minipage}%
 \kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
