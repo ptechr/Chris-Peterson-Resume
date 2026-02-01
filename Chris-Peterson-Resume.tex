@@ -1,0 +1,186 @@
+\documentclass[11pt]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=0.75in]{geometry}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\raggedright%
+\setlength{\emergencystretch}{2em}
+
+% ---------- Colors ----------
+\definecolor{primary}{HTML}{5B8DEF} % soft blue
+\definecolor{muted}{HTML}{777777}
+
+% ---------- Section Style ----------
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% ---------- Lists ----------
+\setlist[itemize]{leftmargin=*, noitemsep}
+
+% ---------- Document ----------
+\begin{document}
+
+% ---------- Header ----------
+{\color{primary}\Huge \textbf{Christopher Peterson}} \\[-2pt]
+
+\vspace{6pt}
+
+\small
+\faEnvelope\ \href{mailto:chris.will.peterson@gmail.com}{chris.will.peterson@gmail.com} \quad
+\faLinkedin\ \href{https://www.linkedin.com/in/chriswillpeterson/}{chriswillpeterson} \quad
+\faGithub\ \href{https://github.com/ptechr}{ptechr} \quad
+\faMapMarker* \ Redlands, CA
+
+\vspace{14pt}
+
+% ---------- Summary ----------
+\section{Summary}
+
+\vspace{6pt}
+
+% ---------- Experience ----------
+\section{Experience}
+
+\vspace{6pt}
+
+\textbf{Senior Business Intelligence Engineer} \\
+{\color{primary}Amazon}
+
+\small
+\faCalendar\ July 2024 -- Present \quad
+\faMapMarker* \ Virtual Location California (Remote)
+\normalsize
+
+\begin{itemize}[itemsep=4pt]
+
+  \item Designed and scaled a real-time distributed data ingestion platform processing
+1.3B+ events per day with zero data loss, reducing inventory data latency from
+24 hours to 10 minutes through a hand-crafted ETL pipeline using SNS, SQS, ECS, Kinesis, 
+DynamoDB, \& S3.
+
+  \item Scaled team-owned Parquet-based data lake by replacing legacy snapshot pipelines with 
+  fully stream-derived datasets featuring optimized partitioning, deduplication, enrichment, and 
+  schema design—eliminating race conditions, boosting query performance, and driving adoption to 
+  178 production tables (4,350\% growth from 2024), generating 1,200 access requests across 165 teams in 2025.
+
+  \item Developed a Spark-based distributed life-cycle engine processing 900M records/day, constructing 
+  end-to-end item lineage with deterministic hashing and FIFO-based indexing using a dual-tiered maximum 
+  bi-partite matching algorithm. This generated life-cycle completeness to 97.8\% and reduced lineage computation 
+  from multiple weeks of developer effort to minutes, enabling scalable inventory tracing across Amazon as a generalized 
+  inventory-tracing-as-a-service model.
+
+  \item Translated life-cycle and defect prediction signals into data-driven operational 
+  decisions using automated validation, confidence-interval sampling, and prioritization logic. 
+  Delivered \$21.8M in realized savings in 2025 (\$34M annualized) and improved network defect 
+  remediation efficiency by 334\%, validating model-driven interventions.
+
+  \item Implemented CI/CD governance and version-controlled deployments for over 1,700 production data pipelines, 
+  enforcing code review verification and locked UI edits. Reduced deployment risk and improved reliability across a 
+  highly interdependent data ecosystem serving hundreds of teams.
+
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Business Analyst} \\
+{\color{primary}Amazon}
+
+\small
+\faCalendar\ March 2022 -- July 2024 \quad
+\faMapMarker* \ Virtual Location California (Remote)
+\normalsize
+
+\begin{itemize}[itemsep=4pt]
+
+  \item Built and deployed a North America inventory labor forecasting system managing a \$1.3B budget, delivering 
+  2.8M metric forecasts across 320 fulfillment centers over a 104-week horizon. Engineered fully automated ETL pipelines 
+  for 22k KPIs and designed dynamic Sagemaker time series models supporting multiple prediction types (Linear Regression, 
+  SARIMAX, KNN, Random Forest, XGBoost) with hierarchical reconciliation, hyperparameter optimization, and residual course 
+  correction. Developed custom EDA and visualization notebooks analyzing seasonality, correlations, and network-FC dynamics. 
+  Delivered a stakeholder-facing labor planning web portal with override capabilities, algebraic optimization recalculation, and network-level 
+  reporting, enabling actionable, constraint-aware workforce planning.
+
+  \item Delivered a rapid-response tooling solution that eliminated schema deployment friction in Amazon’s 
+  centralized data lake, which automated transformation from Redshift to SDL schemas with full support for 
+  constraint keying and data type translations. This reduced dataset onboarding time 6× and scaled organically to 
+  2,000+ engineers across the Software Development, Data Engineering, Business Intelligence, and Data Science job families. 
+
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Data Analyst} \\
+{\color{primary}Amazon}
+
+\small
+\faCalendar\ August 2018 -- March 2022 \quad
+\faMapMarker* \ Redlands, CA
+\normalsize
+
+\begin{itemize}[itemsep=4pt]
+  \item Built a quarterly logistic regression model to detect shift false pick shorts in real time, achieving 79\% precision 
+  and enabling targeted coaching. Drove site to become the top-performing building in the region for pick short DPMO 
+  for all of Q4 2021.
+
+  \item Developed a supervised multinomial classification model to identify root cause work reasons and associate responsibility 
+  for bin inventory adjustments, increasing regional classification accuracy from 3.5\% (manual) to 52\% via automated workflow.
+
+  \item Designed a bias-free quality coaching application that measures pre- and post-coaching performance, enabling data-driven 
+  manager-associate conversations. In 2021, 75.6\% of coachings led to improvement, with median DPMO reductions of 49.55\%.
+\end{itemize}
+
+% ---------- Skills ----------
+\section{Skills}
+
+\vspace{6pt}
+
+\begin{itemize}[itemsep=4pt]
+  \item \textbf{Programming/Scripting}: Python, TypeScript, HTML, CSS
+  \item \textbf{Version Control}: Git, ECR, Docker
+  \item \textbf{Infrastructure as Code (IaC)}: AWS CDK
+  \item \textbf{Data Engineering/ETL}: PySpark, SQL, SQS, SNS, Kinesis, DynamoDB, 
+  Lambda, S3, ECS, Redshift, EMR, Partition Optimization, Schema Design
+  \item \textbf{Statistics/Model Selection}: VIF, AIC/BIC, Adjusted R-Squared, SHAP, PCA, 
+  Confidence Intervals, Hypothesis Testing, Paired t-tests, A/B Pilot Selection/Validation, Autocorrelation, 
+  Correlation, Probability Theory, Combinatorics, Augmented Dickey-Fuller Test, Data Interpolation, 
+  Hyperparameter Grid Searching, Recursive Feature Elimination, Train/Test Splits
+  \item \textbf{Predictive Modeling}: Sagemaker, Timeseries, Sklearn, Statsmodels, PyTorch, SARIMAX, XGBoost, Random 
+  Forest Regression, Linear Regression, Logistic Regression, Lasso Regression, K-nearest Neighbor, Artificial Neural Network
+  \item \textbf{Visualization}: Quicksight, Matplotlib, AG Charts, Jupyter Notebook
+\end{itemize}
+
+% ---------- Education ----------
+\section{Education}
+\vspace{6pt}
+
+\textbf{Bachelor's of Business Administration, Business Management (BBA)} \\
+{\color{primary}Marywood University}
+
+\small
+\faCalendar\ 2012 -- 2015 \quad
+\faMapMarker* \ Scranton, PA
+\normalsize
+
+\begin{itemize}
+
+  \item Placed 2\textsuperscript{nd} in Business Accreditation Assessment
+  \item 3.76 Business GPA
+  \item Dean's List Recognition
+  \item CSAC Academic Honor Roll
+  \item NCAA Baseball Player
+
+\end{itemize}
+
+\end{document}
